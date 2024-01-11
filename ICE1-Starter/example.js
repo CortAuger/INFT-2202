@@ -19,5 +19,5 @@ listItems.forEach(function(item) {
 
 // ADD NUMBER OF ITEMS IN THE LIST TO THE HEADING
 var itemCount = listItems.length;
-var header = document.querySelector("#header");
+var header = document.querySelector("h2");
 header.innerHTML += " (" + itemCount + " items)";
