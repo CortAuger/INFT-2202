@@ -1,13 +1,13 @@
 // ADD NEW ITEM TO END OF LIST
 var ul = document.querySelector("ul");
 var newEndItem = document.createElement("li");
-var endItemText = document.createTextNode("New Item at End");
+var endItemText = document.createTextNode("Milk");
 newEndItem.appendChild(endItemText);
 ul.appendChild(newEndItem);
 
 // ADD NEW ITEM START OF LIST
 var newStartItem = document.createElement("li");
-var startItemText = document.createTextNode("New Item at Start");
+var startItemText = document.createTextNode("Eggs");
 newStartItem.appendChild(startItemText);
 ul.insertBefore(newStartItem, ul.firstChild);
 
