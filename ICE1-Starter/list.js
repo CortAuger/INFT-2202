@@ -1,31 +1,23 @@
-// ADDING ITEMS TO START AND END OF LIST
-// Get the <ul> element
-
 // ADD NEW ITEM TO END OF LIST
-// Create element
-// Create text node
-// Add text node to element
-// Add element end of list
+var ul = document.querySelector("ul");
+var newEndItem = document.createElement("li");
+var endItemText = document.createTextNode("Milk");
+newEndItem.appendChild(endItemText);
+ul.appendChild(newEndItem);
 
 // ADD NEW ITEM START OF LIST
-// Create element
-// Create text node
-// Add text node to element
-// Add element to list
-
-
-
-// All <li> elements
+var newStartItem = document.createElement("li");
+var startItemText = document.createTextNode("Eggs");
+newStartItem.appendChild(startItemText);
+ul.insertBefore(newStartItem, ul.firstChild);
 
 // ADD A CLASS OF COOL TO ALL LIST ITEMS
-// Counter variable
-// Loop through elements
-// Change class to cool
-
+var listItems = document.querySelectorAll("li");
+listItems.forEach(function(item) {
+  item.classList.add("cool");
+});
 
 // ADD NUMBER OF ITEMS IN THE LIST TO THE HEADING
-// h2 element
-// h2 text
-// No. of <li> elements
-// Content
-// Update h2 using innerHTML (not textContent) because it contains markup
+var itemCount = listItems.length;
+var header = document.querySelector("h2");
+header.innerHTML += " (" + itemCount + " items)";
