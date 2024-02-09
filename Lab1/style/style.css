@@ -1,3 +1,11 @@
+/*
+Name: Cort Auger
+Number: 100862580
+Course: INFT 2202
+Date: 2/9/2024
+Description: style.css file for CSS lab 1
+ */
+
 /* Set background image */
 body {
     background-image: url(../images/AbstractBkgd.jpg);
@@ -5,8 +13,13 @@ body {
 }
 
 /* Centre the headings */
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4 {
     text-align: center;
+}
+
+/* Change h5 colour */
+h5 {
+    color: ghostwhite;
 }
 
 /* Set up paragraph text*/
@@ -33,3 +46,10 @@ img {
 .image-container img {
     margin: 0 50px;
 }
+
+/* Set form Width */
+#message-form {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }

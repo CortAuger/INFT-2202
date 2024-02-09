@@ -1,13 +1,22 @@
+<!--
+Name: Cort Auger
+Number: 100862580
+Course: INFT 2202
+Date: 2/9/2024
+Description: products.html file for CSS lab 1
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<title>Lab 1 - Products</title>
+		<title>Lab 1 - Interests</title>
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="./style/style.css" />
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 	</head>
 	<body>
         <!-- Set up navbar -->
@@ -19,44 +28,27 @@
     
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a id="homepage-link" class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                        <a id="products-link" class="nav-link" href="./products.html">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./products.html">Products</a>
+                        <a id="services-link" class="nav-link" href="./services.html">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./services.html">Services</a>
+                        <a id="about-link" class="nav-link" href="./about.html">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a id="contact-link" class="nav-link" href="./contact.html">Contact Us</a>
                     </li>
                 </ul>
             </div>
         </nav>
     
-        <div id="page">
-            <br/>
-            <h1 id="header">Products</h1>
-            <br/>
-            <p>This is a product page demonstration for INFT 2202 Lab 1.
-                This page demonstrates paragraph text, an h1 heading, and some images.
-                <br/>
-                <br/>
-                Here are 3 images of some of my favorite pieces of media:
-                <br/>
-            </p>
-            <div class="image-container">
-                <img src="./images/zeldaLogo.png" alt="The Legend of Zelda">
-                <nbsp/><nbsp/>
-                <img src="./images/dune.jpg" alt="Dune">
-                <nbsp/><nbsp/>
-                <img src="./images/theoryLogo.jpg" alt="Theory Channels">
-            </div>
-        </div>
+        <!-- Page Content -->
+        <div id="productsPage"></div>
     
         <script src="./scripts/app.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
