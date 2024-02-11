@@ -66,7 +66,7 @@ function injectProductContent() {
         <br/>
         <h1 id="header">Interests</h1>
         <br/>
-        <p>This is a product page demonstration for INFT 2202 Lab 1.
+        <p>This is a interests page demonstration for INFT 2202 Lab 1.
             This page demonstrates paragraph text, an h1 heading, and some images.
             <br/>
             <br/>
@@ -208,12 +208,8 @@ function injectContactContent() {
                 </div>
 
 			<!-- submit button -->
-			<button type="submit" class="btn btn-primary" id="btnRegSubmit">
+			<button type="reset" class="btn btn-primary" id="btnSubmit">
 				Submit
-			</button>
-			<!-- reset button  -->
-			<button type="Reset" class="btn btn-primary" id="btnReset">
-				Reset
 			</button>
 		</form>
         `;
@@ -243,7 +239,23 @@ else if (document.getElementById('aboutPage')) {
 
 else if (document.getElementById('contactPage')) {
     // Function to inject services page content when the page loads
-    window.onload = injectContactContent;
+    injectContactContent();
+
+    // Prints the entered info to the console
+    window.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("btnSubmit").addEventListener("click", function() {
+            var name = document.getElementById("inputName").value;
+            var phone = document.getElementById("inputPhone").value;
+            var email = document.getElementById("inputEmail").value;
+            var message = document.getElementById("inputMessage").value;
+            console.log("Name: " + name + ", Phone Number: " + phone + ", Email: " + email + ", Message: " + message);
+
+            // Set a timer to redirect after 3 seconds
+            setTimeout(function() {
+                window.location.href = "index.html";
+            }, 3000);
+        });
+    });
 }
 
 // Find element id "products-link"
