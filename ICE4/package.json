@@ -1,4 +1,14 @@
 {
+  "name": "ice4",
+  "version": "1.0.0",
+  "description": "ICE4",
+  "main": "index.html",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cort Auger",
+  "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.2.3",
     "install": "^0.13.0"
