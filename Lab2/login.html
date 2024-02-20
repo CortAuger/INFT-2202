@@ -1,0 +1,110 @@
+<!--
+Name: Cort Auger
+Number: 100862580
+Course: INFT 2202
+Date: 2/19/2024
+Description: login.html file for CSS lab 2
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Lab 2 - Login</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="./style/style.css" />
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	</head>
+	<body>
+        <!-- Set up navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="./index.html">Lab 2 for CSS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a id="homepage-link" class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="products-link" class="nav-link" href="./products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="services-link" class="nav-link" href="./services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="about-link" class="nav-link" href="./about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="contact-link" class="nav-link" href="./contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <div class="d-flex justify-content-end">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <span class="navbar-text">
+                                Cort
+                            </span>
+                        </li>
+                        <li class="nav-item active">
+                            <a id="login-link" class="nav-link" href="./login.html">Sign In</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+        <!-- Page Content-->
+        <div id="loginPage">
+            <br/>
+            <h1 id="header">Login Page</h1>
+            <br/>
+            <p>Please enter your username and password to sign in:</p>
+
+            <form id="login-form">
+                <!-- form group for username entry -->
+                <div class="form-group" id="username-group">
+                    <label for="inputUsername">Username</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="inputUsername"
+                        placeholder="Username"
+                        required
+                    />
+                    <div class="errorMessage"></div>
+                </div>
+                    <!-- form group for password entry -->
+                    <div class="form-group" id="pass-group">
+                    <label for="inputPassword">Password</label>
+                    <input
+                        type="password"
+                        class="form-control"
+                        id="inputPassword"
+                        placeholder="Password"
+                        required
+                    />
+                    <div class="errorMessage"></div>
+                </div>
+
+                <!-- submit button -->
+                <button type="submit" class="btn btn-primary" id="btnRegSubmit">
+                    Login
+                </button>
+            </form>
+            <br/>
+            <p>Don't have an account? <a id="register-link" class="nav-link" href="./register.html">Register here!</a></p>
+        </div>
+    
+        <script src="./scripts/app.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    </body>
+</html>
