@@ -6,6 +6,48 @@ Date: 2/23/2024
 Description: app.js file for CSS labs
  */
 
+// Inject the top navbar
+document.getElementById('topNavbar').innerHTML = `
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<a class="navbar-brand" href="./index.html">INFT 2202 Website</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li id="navIndex" class="nav-item">
+            <a id="homepage-link" class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li id="navProducts" class="nav-item">
+            <a id="products-link" class="nav-link" href="./products.html">Products</a>
+        </li>
+        <li id="navServices" class="nav-item">
+            <a id="services-link" class="nav-link" href="./services.html">Services</a>
+        </li>
+        <li id="navAbout" class="nav-item">
+            <a id="about-link" class="nav-link" href="./about.html">About Us</a>
+        </li>
+        <li id="navContact" class="nav-item">
+            <a id="contact-link" class="nav-link" href="./contact.html">Contact Us</a>
+        </li>
+    </ul>
+    <div class="d-flex justify-content-end">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <span class="navbar-text">
+                    
+                </span>
+            </li>
+            <li class="nav-item active">
+                <a id="login-link" class="nav-link" href="./login.html">Sign In</a>
+            </li>
+        </ul>
+    </div>
+</div>
+</nav>
+`;
+
 // Function to add the "Human Resources" link
 function addHRNavLink() {
     // Create new li element
@@ -54,6 +96,10 @@ function injectHomeContent() {
             <h2>Lab 1 Home Page</h2>
             <h3>Welcome to the home page for Lab 1!</h3>
         `;
+        
+        // Change active link
+        var element = document.getElementById('navIndex');
+        element.className = 'nav-item active';
     }
 }
 
@@ -80,6 +126,10 @@ function injectProductContent() {
             <nbsp/><nbsp/>
             <img src="./images/theoryLogo.jpg" alt="Theory Channels">
         `;
+
+        // Change active link
+        var element = document.getElementById('navProducts');
+        element.className = 'nav-item active';
     }
 }
 
@@ -110,6 +160,10 @@ function injectServicesContent() {
             <br/>
             <h3><a href="./pdfs/resume.pdf">Click to Download My Resume</a></h3>
         `;
+
+        // Change active link
+        var element = document.getElementById('navServices');
+        element.className = 'nav-item active';
     }
 }
 
@@ -142,6 +196,10 @@ function injectAboutContent() {
                 <br/><br/><br/><br/><br/><br/>
             </div>
         `;
+
+        // Change active link
+        var element = document.getElementById('navAbout');
+        element.className = 'nav-item active';
     }
 }
 
@@ -213,6 +271,10 @@ function injectContactContent() {
 			</button>
 		</form>
         `;
+
+        // Change active link
+        var element = document.getElementById('navContact');
+        element.className = 'nav-item active';
     }
 }
 
