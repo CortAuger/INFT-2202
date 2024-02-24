@@ -2,8 +2,8 @@
 Name: Cort Auger
 Number: 100862580
 Course: INFT 2202
-Date: 2/9/2024
-Description: app.js file for CSS lab 1
+Date: 2/23/2024
+Description: app.js file for CSS labs
  */
 
 // Function to add the "Human Resources" link
@@ -280,3 +280,92 @@ var body = document.querySelector("body");
 
 // Append the nav-bar to bottom
 body.appendChild(newDiv);
+
+// Login and Registration
+$(document).ready(function() {
+
+    // Insert username on the login page
+    $('#login-form').submit(function(e) {
+      e.preventDefault(); // Prevent the form from submitting normally
+  
+      var username = $('#inputUsername').val(); // Get the entered username
+      $('.navbar-text').text(username); // Update the navbar text with the username
+      $('#login-link').text("Sign Out");
+    });
+
+    $('#registration-form').submit(function(e) {
+        e.preventDefault(); // Prevent the form from submitting normally
+
+        var firstName = $('#inputFirst').val();
+        var lastName = $('#inputLast').val();
+        var email = $('#inputEmail').val();
+        var password1 = $('#inputPassword').val();
+        var password2 = $('#inputPassword2').val();
+        var username = firstName + lastName;
+
+        // Show the error div if there is an error message (Data Validation)
+        if (firstName === "")
+        {
+            $('#errorMessage').text("Please enter your first name!");
+            $('#errorDiv').show();
+        }
+        else if (lastName === "")
+        {
+            $('#errorMessage').text("Please enter your last name!");
+            $('#errorDiv').show();
+        }
+        else if (firstName.length < 2 || lastName.length < 2)
+        {
+            $('#errorMessage').text("Your first name and last name must be at least 2 characters long!");
+            $('#errorDiv').show();
+        }
+        else if (email === "")
+        {
+            $('#errorMessage').text("Please enter your email address!");
+            $('#errorDiv').show();
+        }
+        else if (email.length < 8)
+        {
+            $('#errorMessage').text("Your email address must be at least 8 characters long!");
+            $('#errorDiv').show();
+        }
+        else if (!email.includes("@"))
+        {
+            $('#errorMessage').text("Your email address must contain the @ character!");
+            $('#errorDiv').show();
+        }
+        else if (password1 === "")
+        {
+            $('#errorMessage').text("Please enter a password!");
+            $('#errorDiv').show();
+        }
+        else if (password1.length < 6)
+        {
+            $('#errorMessage').text("Your password must be at least 6 characters long!");
+            $('#errorDiv').show();
+        }
+        else if (password2 === "")
+        {
+            $('#errorMessage').text("Please confirm your password!");
+            $('#errorDiv').show();
+        }
+        else if (password2 !== password1)
+        {
+            $('#errorMessage').text("Passwords do not match!");
+            $('#errorDiv').show();
+        }
+
+        // Submit the form and keep the error div hidden
+        else
+        {
+            $('#errorDiv').hide();
+
+            // Create a new user
+            const newUser = new User(firstName, lastName, username, email, password1);
+            console.log(newUser);
+
+            // Reset the fields
+            $(this)[0].reset();
+        }
+    });
+});

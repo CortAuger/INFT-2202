@@ -2,7 +2,7 @@
 Name: Cort Auger
 Number: 100862580
 Course: INFT 2202
-Date: 2/19/2024
+Date: 2/23/2024
 Description: register.html file for CSS lab 2
 -->
 
@@ -43,23 +43,114 @@ Description: register.html file for CSS lab 2
                     <li class="nav-item">
                         <a id="contact-link" class="nav-link" href="./contact.html">Contact Us</a>
                     </li>
-                    <li class="nav-item">
-                        <a id="login-link" class="nav-link" href="./login.html">Sign In</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a id="register-link" class="nav-link" href="./register.html">Register</a>
-                    </li>
                 </ul>
+                <div class="d-flex justify-content-end">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <span class="navbar-text">
+                                
+                            </span>
+                        </li>
+                        <li class="nav-item active">
+                            <a id="login-link" class="nav-link" href="./login.html">Sign In</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     
         <!-- Page Content-->
-        <div id="registerPage"></div>
-    
-        <script src="./scripts/app.js"></script>
+        <div id="registerPage">
+            <br/>
+            <h1 id="header">Registration Page</h1>
+            <br/>
+            <p>Please enter your info to create an account:</p>
+
+            <form id="registration-form">
+
+                <!-- Div for error messages -->
+                <div id="errorDiv" style="display:none;">
+                    <h3 id="errorMessage" style="color:crimson">Error Message Here</h3>
+                </div>
+
+		    	<!-- form group for first name entry -->
+		    	<div class="form-group" id="first-group">
+		    		<label for="inputFirst">First Name</label>
+		    		<input
+		    			type="text"
+		    			class="form-control"
+		    			id="inputFirst"
+		    			placeholder="First name"
+		    		/>
+		    		<div class="errorMessage"></div>
+		    	</div>
+
+		    	<!-- form group for last name entry -->
+		    	<div class="form-group" id="last-group">
+		    		<label for="inputLast">Last Name</label>
+		    		<input
+		    			type="text"
+		    			class="form-control"
+		    			id="inputLast"
+		    			placeholder="Last name"
+		    		/>
+		    		<div class="errorMessage"></div>
+		    	</div>
+
+		    	<!-- form group for email entry -->
+		    	<div class="form-group">
+		    		<div class="form-group" id="email-group">
+		    			<label for="inputEmail">Email</label>
+		    			<input
+		    				type="text"
+		    				class="form-control"
+		    				id="inputEmail"
+		    				placeholder="Email"
+		    			/>
+		    			<div class="errorMessage"></div>
+		    		</div>
+                    
+		    		<!-- form group for password 1 entry -->
+		    		<div class="form-group" id="pass1-group">
+		    			<label for="inputPassword">Password</label>
+		    			<input
+		    				type="password"
+		    				class="form-control"
+		    				id="inputPassword"
+		    				placeholder="Password"
+		    			/>
+		    			<div class="errorMessage"></div>
+		    		</div>
+
+		    		<!-- form group for password 2 entry -->
+		    		<div class="form-group" id="pass2-group">
+		    			<label for="inputPassword2">Confirm Password</label>
+		    			<input
+		    				type="password"
+		    				class="form-control"
+		    				id="inputPassword2"
+		    				placeholder="Confirm Password"
+		    			/>
+		    			<div class="errorMessage"></div>
+		    		</div>
+		    	</div>
+
+		    	<!-- submit button -->
+		    	<button type="submit" class="btn btn-primary" id="btnRegSubmit">
+		    		Register
+		    	</button>
+		    </form>
+
+            <!-- Login page link -->
+            <br/>
+            <p>Already have an account? <a id="register-link" class="nav-link" href="./login.html">Sign in here!</a></p>
+        </div>
+        
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="./scripts/user.js"></script>
+        <script src="./scripts/app.js"></script>
 
     </body>
 </html>
