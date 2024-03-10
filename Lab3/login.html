@@ -1,0 +1,77 @@
+<!--
+Name: Cort Auger
+Number: 100862580
+Course: INFT 2202
+Date: 2/19/2024
+Description: login.html file for CSS lab 2
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Lab 2 - Login</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="./style/style.css" />
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	</head>
+	<body>
+        <!-- Navbar div -->
+        <div id="topNavbar"></div>
+    
+        <!-- Page Content-->
+        <div id="loginPage">
+            <br/>
+            <h1 id="header">Login Page</h1>
+            <br/>
+            <p>Please enter your username and password to sign in:</p>
+
+            <form id="login-form">
+                <!-- form group for username entry -->
+                <div class="form-group" id="username-group">
+                    <label for="inputUsername">Username</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="inputUsername"
+                        placeholder="Username"
+                        required
+                    />
+                    <div class="errorMessage"></div>
+                </div>
+                    <!-- form group for password entry -->
+                    <div class="form-group" id="pass-group">
+                    <label for="inputPassword">Password</label>
+                    <input
+                        type="password"
+                        class="form-control"
+                        id="inputPassword"
+                        placeholder="Password"
+                        required
+                    />
+                    <div class="errorMessage"></div>
+                </div>
+
+                <!-- submit button -->
+                <button type="submit" class="btn btn-primary" id="btnRegSubmit">
+                    Login
+                </button>
+            </form>
+
+            <!-- Register page link -->
+            <br/>
+            <p>Don't have an account? <a id="register-link" class="nav-link" href="./register.html">Register here!</a></p>
+        </div>
+        <br/>
+        <br/>
+    
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="./scripts/app.js"></script>
+
+    </body>
+</html>

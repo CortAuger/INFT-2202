@@ -1,0 +1,122 @@
+/*
+Name: Cort Auger
+Number: 100862580
+Course: INFT 2202
+Date: 2/9/2024
+Description: style.css file for CSS lab 1
+ */
+
+/* Set background image */
+body {
+    background-image: url(../images/AbstractBkgd.jpg);
+    background-size: cover;
+}
+
+/* Centre the headings */
+h1, h2, h3, h4 {
+    text-align: center;
+}
+
+/* Change h5 colour */
+h5 {
+    color: ghostwhite;
+}
+
+/* Set up paragraph text*/
+p {
+    text-align: center;
+    font-size: 16pt;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Keep images the same size*/
+img {
+    width: auto; 
+    height: 200px; 
+}
+
+/* Center images horizontally */
+.image-container {
+    text-align: center;
+}
+
+/* Add space between images */
+.image-container img {
+    margin: 0 50px;
+}
+
+/* Set contact form Width */
+#message-form {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+/* Set registration form width */
+#registration-form {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+/* Set login form width */
+#login-form {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+/* Flexbox */
+.blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.blog-post {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 20px;
+}
+
+/* Card Styles*/
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card-body {
+    padding: 20px;
+}
+.card-title {
+    color: #15528b;
+    font-weight: bold;
+    text-align: left;
+}
+.card-text {
+    font-size: 12pt;
+    text-align: left;
+    margin-left: 0%;
+    margin-right: 0%;
+    max-width: 10000px;
+}
+
+/* User area styles */
+.user-container {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    padding-left: 4%;
+    padding-top: 4%;
+}
+.user-photo {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+}
+.username {
+    padding-left: 4%;
+    font-size: 14pt;
+}

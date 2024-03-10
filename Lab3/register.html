@@ -1,0 +1,121 @@
+<!--
+Name: Cort Auger
+Number: 100862580
+Course: INFT 2202
+Date: 2/23/2024
+Description: register.html file for CSS lab 2
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Lab 2 - Register</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="./style/style.css" />
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	</head>
+	<body>
+        <!-- Navbar div -->
+        <div id="topNavbar"></div>
+    
+        <!-- Page Content-->
+        <div id="registerPage">
+            <br/>
+            <h1 id="header">Registration Page</h1>
+            <br/>
+            <p>Please enter your info to create an account:</p>
+
+            <form id="registration-form">
+
+                <!-- Div for error messages -->
+                <div id="errorDiv" style="display:none;">
+                    <h3 id="errorMessage" style="color:crimson">Error Message Here</h3>
+                </div>
+
+		    	<!-- form group for first name entry -->
+		    	<div class="form-group" id="first-group">
+		    		<label for="inputFirst">First Name</label>
+		    		<input
+		    			type="text"
+		    			class="form-control"
+		    			id="inputFirst"
+		    			placeholder="First name"
+		    		/>
+		    		<div class="errorMessage"></div>
+		    	</div>
+
+		    	<!-- form group for last name entry -->
+		    	<div class="form-group" id="last-group">
+		    		<label for="inputLast">Last Name</label>
+		    		<input
+		    			type="text"
+		    			class="form-control"
+		    			id="inputLast"
+		    			placeholder="Last name"
+		    		/>
+		    		<div class="errorMessage"></div>
+		    	</div>
+
+		    	<!-- form group for email entry -->
+		    	<div class="form-group">
+		    		<div class="form-group" id="email-group">
+		    			<label for="inputEmail">Email</label>
+		    			<input
+		    				type="text"
+		    				class="form-control"
+		    				id="inputEmail"
+		    				placeholder="Email"
+		    			/>
+		    			<div class="errorMessage"></div>
+		    		</div>
+                    
+		    		<!-- form group for password 1 entry -->
+		    		<div class="form-group" id="pass1-group">
+		    			<label for="inputPassword">Password</label>
+		    			<input
+		    				type="password"
+		    				class="form-control"
+		    				id="inputPassword"
+		    				placeholder="Password"
+		    			/>
+		    			<div class="errorMessage"></div>
+		    		</div>
+
+		    		<!-- form group for password 2 entry -->
+		    		<div class="form-group" id="pass2-group">
+		    			<label for="inputPassword2">Confirm Password</label>
+		    			<input
+		    				type="password"
+		    				class="form-control"
+		    				id="inputPassword2"
+		    				placeholder="Confirm Password"
+		    			/>
+		    			<div class="errorMessage"></div>
+		    		</div>
+		    	</div>
+
+		    	<!-- submit button -->
+		    	<button type="submit" class="btn btn-primary" id="btnRegSubmit">
+		    		Register
+		    	</button>
+		    </form>
+
+            <!-- Login page link -->
+            <br/>
+            <p>Already have an account? <a id="register-link" class="nav-link" href="./login.html">Sign in here!</a></p>
+        </div>
+		<br/>
+        <br/>
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="./scripts/user.js"></script>
+        <script src="./scripts/app.js"></script>
+
+    </body>
+</html>
