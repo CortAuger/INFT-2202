@@ -24,11 +24,11 @@ async function fetchUserName(userId) {
     return data;
 }
 
-// Fetch photo from Pixabay API
+// Fetch photo from Pixabay API (Key - 42791407-fe4cbae18d619a181bf4edd80)
 async function fetchPhoto() {
     const response = await fetch(`https://pixabay.com/api/?key=42791407-fe4cbae18d619a181bf4edd80&q=robot+character+cartoon&image_type=photo`);
     const data = await response.json();
-    return data.hits[6].webformatURL;
+    return data.hits[6].webformatURL; // I chose the 6th photo returned for the terms "robot+character+cartoon" because I though it looked good for a user photo
 }
 
 // Load blog posts with user data and photo
@@ -36,7 +36,7 @@ async function loadBlogPosts() {
     const blogPosts = await fetchBlogPosts();
     const blogPostsContainer = document.getElementById('blogPage');
 
-    // Make 30 cards
+    // Make 30 cards/blog posts
     blogPosts.slice(0, 30).forEach(async post => {
         const postElement = document.createElement('div');
         postElement.classList.add('blog-post');
