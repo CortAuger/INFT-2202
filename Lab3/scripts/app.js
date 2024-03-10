@@ -2,7 +2,7 @@
 Name: Cort Auger
 Number: 100862580
 Course: INFT 2202
-Date: 2/23/2024
+Date: 3/9/2024
 Description: app.js file for CSS labs
  */
 
